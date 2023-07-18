@@ -156,26 +156,26 @@ async def next_page(bot, query):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                    InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                    InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
-                 ]
+                    InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
+                ]
             )
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                    InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                    InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                    InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
                 ]
             )            
     except KeyError:
         await save_group_settings(query.message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                 InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                 InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                 InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                 InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                 InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                 InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
     try:
@@ -242,12 +242,7 @@ async def next_page(bot, query):
                     InlineKeyboardButton(f"{math.ceil(int(offset)/10)+1} / {math.ceil(total/10)}", callback_data="pages"),
                     InlineKeyboardButton("𝐍𝐄𝐗𝐓 ➪", callback_data=f"next_{req}_{key}_{n_offset}")
                 ],
-            )
-    btn.insert(0, [
-        InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-        InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-        InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
-    ])
+            )    
     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
@@ -329,18 +324,18 @@ async def language_check(bot, query):
             if settings['auto_delete']:
                 btn.insert(0, 
                     [
-                        InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                        InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                        InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                        InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                        InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                        InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
                     ]
                 )
 
             else:
                 btn.insert(0, 
                     [
-                        InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                        InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                        InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                        InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                        InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                        InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
                     ]
                 )
                     
@@ -348,10 +343,9 @@ async def language_check(bot, query):
             await save_group_settings(query.message.chat.id, 'auto_delete', True)
             btn.insert(0, 
                 [
-                    inlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                    InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                    InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
-                    
+                    InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
                 ]
             )
 
@@ -1593,26 +1587,26 @@ async def auto_filter(client, msg, spoll=False):
         if settings['auto_delete']:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                    InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                    InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                    InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
                 ]
             )
         else:
             btn.insert(0, 
                 [
-                    InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                    InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                    InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                    InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                    InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                    InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
                 ]
             )       
     except KeyError:
         await save_group_settings(message.chat.id, 'auto_delete', True)
         btn.insert(0, 
             [
-                InlineKeyboardButton(f"how to open", url="https://t.me/how_open_this_link"),
-                InlineKeyboardButton("🎙 Lᴀɴɢᴜᴀɢᴇs 🎙", callback_data=f"select_lang#{req}"),
-                InlineKeyboardButton(f"🍑 sex video", url="https://t.me/+Ce98xoyvoLcwYThl")
+                InlineKeyboardButton(text='hot to open', url=f'https://t.me/how_open_this_link'),
+                InlineKeyboardButton("ʟᴀɴɢᴜᴀɢᴇs", callback_data=f"languages#{key}"),
+                InlineKeyboardButton("Sᴇᴀsᴏɴs",  callback_data=f"seasons#{key}")
             ]
         )
 
