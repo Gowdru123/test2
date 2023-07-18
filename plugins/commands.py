@@ -21,11 +21,8 @@ BATCH_FILES = {}
 @Client.on_message(filters.command("start") & filters.incoming)
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        buttons = [[
-                    InlineKeyboardButton('🤑 earn money 💸 ', url='https://t.m/jnaneshgowdru'),
-                ][
-                    InlineKeyboardButton('📥 NEW HD MOVIE 📥', url=CHNL_LNK)
-                  ]]
+        buttons =[[
+                    InlineKeyboardButton('🤑 earn money 💸 ', url='https://t.m/jnaneshgowdru')]]              
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=random.choice(PICS),
